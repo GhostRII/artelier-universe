@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artelier 3D — Studio d'impression créative</title>
+  <link rel="stylesheet" href="../styles/artelier.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <svg class="logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="18" fill="#111"/>
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#e03030"/>
+            <stop offset="100%" stop-color="#f5c518"/>
+          </linearGradient>
+        </defs>
+        <circle cx="18" cy="18" r="18" fill="url(#lg1)" opacity="0.15"/>
+        <text x="18" y="23.5" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-weight="900" font-size="18" fill="white">E</text>
+        <circle cx="18" cy="18" r="16.5" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
+      </svg>
+      <span class="logo-name">Artelier 3D</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="../pages-accueil/index.html" class="back-btn">← Accueil</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDE PANEL -->
+  <aside class="side-panel" id="sidePanel">
+    <div class="panel-header">
+      <h2>Navigation</h2>
+      <button class="close-btn" id="closePanel">✕</button>
+    </div>
+    <nav class="panel-nav">
+      <div class="panel-nav-item active" data-target="sec-config"><span class="nav-icon">⚙️</span><span class="nav-label">Configurateur</span></div>
+      <div class="panel-nav-item" data-target="sec-blog"><span class="nav-icon">📰</span><span class="nav-label">Brèves & Actualités</span></div>
+      <div class="panel-nav-item" data-target="sec-gallery"><span class="nav-icon">🖼️</span><span class="nav-label">Nos Créations</span></div>
+      <div class="panel-nav-item" data-target="sec-social"><span class="nav-icon">🔗</span><span class="nav-label">Réseaux sociaux</span></div>
+      <div class="panel-nav-item" data-target="sec-contact"><span class="nav-icon">✉️</span><span class="nav-label">Contact</span></div>
+    </nav>
+    <div class="panel-content">
+      <div class="panel-section active" id="sec-config">
+        <p>Configurez votre produit en quelques clics.</p>
+        <div class="config-grid">
+          <div class="config-card"><div class="c-icon">👕</div><div class="c-label">Textile</div></div>
+          <div class="config-card"><div class="c-icon">🖼️</div><div class="c-label">Affiche</div></div>
+          <div class="config-card"><div class="c-icon">📦</div><div class="c-label">Packaging</div></div>
+          <div class="config-card"><div class="c-icon">🏷️</div><div class="c-label">Étiquette</div></div>
+          <div class="config-card"><div class="c-icon">📒</div><div class="c-label">Carnet</div></div>
+          <div class="config-card"><div class="c-icon">🎁</div><div class="c-label">Cadeau</div></div>
+        </div>
+      </div>
+      <div class="panel-section" id="sec-blog">
+        <div class="blog-item"><div class="b-date">Mai 2026</div><div class="b-title">Nouvelle imprimante grand format</div><div class="b-excerpt">Artelier 3D s'équipe d'une imprimante UV grand format pour des créations encore plus ambitieuses.</div></div>
+        <div class="blog-item"><div class="b-date">Avril 2026</div><div class="b-title">Collaboration avec Studio Lumière</div><div class="b-excerpt">Un partenariat créatif qui a donné vie à une série limitée de posters d'artistes.</div></div>
+        <div class="blog-item"><div class="b-date">Mars 2026</div><div class="b-title">Ouverture du studio au public</div><div class="b-excerpt">Venez découvrir notre atelier : visites et ateliers créatifs sur rendez-vous.</div></div>
+      </div>
+      <div class="panel-section" id="sec-gallery">
+        <p>Quelques réalisations Artelier 3D</p>
+        <div class="mini-gallery">
+          <div class="mini-gallery-item"><img src="../images/F4.png" alt="F4"/></div>
+          <div class="mini-gallery-item"><img src="../images/Doue.png" alt="Doue"/></div>
+          <div class="mini-gallery-item">📦</div>
+          <div class="mini-gallery-item">🎨</div>
+          <div class="mini-gallery-item">🏷️</div>
+          <div class="mini-gallery-item">📒</div>
+          <div class="mini-gallery-item">🖨️</div>
+          <div class="mini-gallery-item">🎁</div>
+          <div class="mini-gallery-item">✨</div>
+        </div>
+      </div>
+      <div class="panel-section" id="sec-social">
+        <p>Suivez-nous sur nos réseaux</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/artelier3d" target="_blank" class="social-link"><span class="s-icon">📸</span><span>Instagram — @artelier3d</span></a>
+          <a href="https://www.instagram.com/artelierfactory" target="_blank" class="social-link"><span class="s-icon">📸</span><span>Instagram — @artelierfactory</span></a>
+          <a href="https://www.tiktok.com/@artelier3d" target="_blank" class="social-link"><span class="s-icon">🎵</span><span>TikTok</span></a>
+        </div>
+      </div>
+      <div class="panel-section" id="sec-contact">
+        <div class="contact-toggle">
+          <button class="toggle-btn active" id="panelPartBtn">Particulier</button>
+          <button class="toggle-btn pro-btn" id="panelProBtn">Professionnel</button>
+        </div>
+        <div class="contact-form active" id="panelFormPart">
+          <h3>Une question ?</h3>
+          <div class="form-sub">Réponse rapide via notre assistant IA.</div>
+          <div class="ia-note"><span class="ia-icon">🤖</span><span>Les demandes particuliers sont traitées en priorité par notre assistant IA.</span></div>
+          <div class="form-group"><label>Votre prénom</label><input type="text" placeholder="Marie" /></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="marie@email.fr" /></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Votre question…"></textarea></div>
+          <button class="submit-btn">Envoyer ma demande</button>
+        </div>
+        <div class="contact-form" id="panelFormPro">
+          <div class="pro-badge">⭐ Accès professionnel prioritaire</div>
+          <h3>Votre projet professionnel</h3>
+          <div class="form-sub">Votre demande est transmise directement à notre équipe.</div>
+          <div class="form-group"><label>Entreprise</label><input type="text" placeholder="Nom de la société" /></div>
+          <div class="form-group"><label>Nom & Prénom</label><input type="text" placeholder="Jean Dupont" /></div>
+          <div class="form-group"><label>Email professionnel</label><input type="email" placeholder="jean@societe.com" /></div>
+          <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="+33 6 00 00 00 00" /></div>
+          <div class="form-group"><label>Type de projet</label><select><option>Impression grand tirage</option><option>Création textile / branding</option><option>Packaging produit</option><option>Collaboration créative</option><option>Autre</option></select></div>
+          <div class="form-group"><label>Description du projet</label><textarea placeholder="Décrivez votre projet…"></textarea></div>
+          <button class="submit-btn pro-submit">Soumettre mon projet</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <section class="hero fade-in">
+      <div class="hero-tag">Studio d'impression créative</div>
+      <h1>L'impression au service<br/>de votre <em>créativité</em></h1>
+      <p class="hero-desc">Artelier 3D est un studio d'impression spécialisé dans la création sur mesure : textile, affiches, packaging et bien plus.</p>
+      <button class="hero-cta" onclick="openPanel('sec-config')">Configurer mon projet →</button>
+    </section>
+
+    <section class="carousel-section">
+      <div class="carousel-track">
+        <div class="carousel-item"><img src="../images/Imprimantes.png" alt="Imprimante grand format"><span class="ci-label">Imprimante grand format</span></div>
+        <div class="carousel-item"><img src="../images/Studio.png" alt="Studio créatif"><span class="ci-label">Studio créatif</span></div>
+        <div class="carousel-item"><span class="ci-icon">👕</span><span class="ci-label">Impression textile</span></div>
+        <div class="carousel-item"><span class="ci-icon">📦</span><span class="ci-label">Packaging sur mesure</span></div>
+        <div class="carousel-item"><span class="ci-icon">🖼️</span><span class="ci-label">Affiches & posters</span></div>
+        <div class="carousel-item"><span class="ci-icon">✂️</span><span class="ci-label">Découpe & finition</span></div>
+        <div class="carousel-item"><img src="../images/Imprimantes.png" alt="Imprimante grand format"><span class="ci-label">Imprimante grand format</span></div>
+        <div class="carousel-item"><img src="../images/Studio.png" alt="Studio créatif"><span class="ci-label">Studio créatif</span></div>
+        <div class="carousel-item"><span class="ci-icon">👕</span><span class="ci-label">Impression textile</span></div>
+        <div class="carousel-item"><span class="ci-icon">📦</span><span class="ci-label">Packaging sur mesure</span></div>
+        <div class="carousel-item"><span class="ci-icon">🖼️</span><span class="ci-label">Affiches & posters</span></div>
+        <div class="carousel-item"><span class="ci-icon">✂️</span><span class="ci-label">Découpe & finition</span></div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 70px;">
+      <div class="section-title-wrap fade-in">
+        <div class="section-label">Nos produits</div>
+        <h2 class="section-title">Ce que nous proposons</h2>
+      </div>
+      <div class="products-grid">
+        <div class="product-card fade-in"><div class="product-card-img">🖨️</div><div class="product-card-body"><h3>Impression numérique</h3><p>Affiches, posters, flyers en haute résolution. Du petit format à l'impression grand format.</p><span class="product-card-tag">À partir de 5€</span></div></div>
+        <div class="product-card fade-in"><div class="product-card-img">👕</div><div class="product-card-body"><h3>Textile personnalisé</h3><p>T-shirts, sweats, tote bags… Impression DTG, sérigraphie ou broderie sur tous supports.</p><span class="product-card-tag">Sur devis</span></div></div>
+        <div class="product-card fade-in"><div class="product-card-img">📦</div><div class="product-card-body"><h3>Packaging & étiquettes</h3><p>Boîtes, étiquettes et emballages sur mesure pour valoriser vos produits et votre marque.</p><span class="product-card-tag">Sur devis</span></div></div>
+      </div>
+    </section>
+
+    <div class="collab-banner fade-in">
+      <h2>Créations réalisées en collaboration avec des marques &amp; des créateurs</h2>
+      <p>Vous avez un projet créatif ambitieux ? Travaillons ensemble pour le concrétiser.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Artelier 3D</div>
+    <div class="footer-links">
+      <a href="#">À propos</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">CGV</a>
+      <a href="#" onclick="openPanel('sec-contact');return false;">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Artelier 3D. Tous droits réservés.</div>
+  </footer>
+
+  <script src="../animations/artelier.js"></script>
+</body>
+</html>

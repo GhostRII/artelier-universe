@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figz Collectible — AI Art Toy Platform</title>
+  <link rel="stylesheet" href="../styles/figz.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">FIGZ <span>●</span> COLLECTIBLE</div>
+  <div class="nav-links">
+    <a href="../pages-accueil/index.html" class="back-home">← Accueil</a>
+    <button onclick="showPage('home')" id="nav-home">Home</button>
+    <button onclick="showPage('create')" id="nav-create">Create</button>
+    <button onclick="showPage('pricing')" id="nav-pricing">Pricing</button>
+    <button onclick="showPage('gallery')" id="nav-gallery">Gallery</button>
+    <button onclick="showPage('influencers')" id="nav-influencers">For Influencers</button>
+    <button onclick="showPage('brands')" id="nav-brands">For Brands</button>
+    <button onclick="showPage('process')" id="nav-process">Process</button>
+    <button class="nav-cta" onclick="showPage('create')">Create Your Art Toy →</button>
+  </div>
+</nav>
+
+<!-- PAGE: HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="label">AI-Powered Art Toy Creation</div>
+      <h1>Your Vision.<br><span class="gold-text">Sculpted by AI.</span><br>Made to Last.</h1>
+      <p>Conçois ton Art Toy unique grâce à l'IA. Choisis ton type de figurine, ton univers, tes accessoires — et reçois un fichier 3D ou une production physique en série.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('create')">✦ Créer mon Art Toy</button>
+        <button class="btn-outline" onclick="showPage('gallery')">Voir la Galerie</button>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-value">∞</div><div class="hero-stat-label">Combinaisons possibles</div></div>
+        <div><div class="hero-stat-value">48h</div><div class="hero-stat-label">Délai concept IA</div></div>
+        <div><div class="hero-stat-value">99€</div><div class="hero-stat-label">À partir de / unité</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <section>
+    <div class="section-header">
+      <div class="label">Pourquoi Figz</div>
+      <h2>La référence mondiale de l'<span class="gold-text">Art Toy personnalisé</span></h2>
+      <p>De la conception IA à la production physique, tout en un seul endroit.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">🤖</div><h3>Génération IA Avancée</h3><p>Tes choix sont convertis en prompt IA optimisé. L'IA génère plusieurs concepts visuels de haute qualité.</p></div>
+      <div class="feature-card"><div class="feature-icon">🎨</div><h3>Configurateur Créatif</h3><p>Choisis parmi des dizaines de types de figurines, univers et accessoires pour créer ton concept unique.</p></div>
+      <div class="feature-card"><div class="feature-icon">📦</div><h3>Production Physique</h3><p>De l'exemplaire unique à la série de 200+, on gère la fabrication, le contrôle qualité et l'expédition.</p></div>
+      <div class="feature-card"><div class="feature-icon">🏆</div><h3>Fichier 3D Professionnel</h3><p>Reçois un fichier 3D prêt à imprimer ou à utiliser dans tes projets créatifs et digitaux.</p></div>
+      <div class="feature-card"><div class="feature-icon">⚡</div><h3>Délais Maîtrisés</h3><p>Suivi en temps réel de ta commande, de la validation du concept jusqu'à la livraison.</p></div>
+      <div class="feature-card"><div class="feature-icon">🌍</div><h3>Pour Tous les Projets</h3><p>Particuliers, influenceurs, marques — nous avons une offre adaptée à chaque besoin et budget.</p></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <section>
+    <div class="section-header">
+      <div class="label">Parcours</div>
+      <h2>De l'idée à la <span class="gold-text">figurine en main</span></h2>
+    </div>
+    <div class="journey-steps">
+      <div class="journey-step"><div class="step-num">1</div><h3>Accueil</h3><p>Découvre la plateforme</p></div>
+      <div class="journey-step"><div class="step-num">2</div><h3>Configurateur</h3><p>Choisis ton type, univers et accessoires</p></div>
+      <div class="journey-step"><div class="step-num">3</div><h3>Génération IA</h3><p>L'IA génère plusieurs concepts</p></div>
+      <div class="journey-step"><div class="step-num">4</div><h3>Validation</h3><p>Tu sélectionnes ton concept</p></div>
+      <div class="journey-step"><div class="step-num">5</div><h3>Choix d'offre</h3><p>Fichier 3D ou production physique</p></div>
+      <div class="journey-step"><div class="step-num">6</div><h3>Paiement</h3><p>Règlement sécurisé via Stripe</p></div>
+      <div class="journey-step"><div class="step-num">7</div><h3>Production</h3><p>Fabrication et livraison</p></div>
+    </div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform — Tous droits réservés</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: CREATE -->
+<div class="page" id="page-create">
+  <div class="config-layout">
+    <div>
+      <div style="margin-bottom: 28px;">
+        <div class="label" style="margin-bottom: 12px;">Configurateur</div>
+        <h2>Crée ton <span class="gold-text">Art Toy</span></h2>
+        <p style="margin-top: 8px; font-size: 14px;">Configure chaque paramètre et génère ton concept unique par IA.</p>
+      </div>
+      <div class="config-panel">
+        <div class="config-step">
+          <div class="step-header"><div class="step-badge">1</div><div><div class="step-title">Type de figurine</div><div class="step-sub">Choisis la base de ton Art Toy</div></div></div>
+          <div class="chips-grid" id="chips-type">
+            <div class="chip" data-group="type" onclick="selectChip(this)">👤 Human</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">🐾 Animal</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">😸 Mascot</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">🤖 Robot</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">👹 Monster</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">🏎️ Racing</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">💎 Luxury</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">📱 Influencer</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">🧙 Fantasy</div>
+            <div class="chip" data-group="type" onclick="selectChip(this)">🦸 Superhero</div>
+          </div>
+        </div>
+        <div class="config-step">
+          <div class="step-header"><div class="step-badge">2</div><div><div class="step-title">Univers</div><div class="step-sub">L'ambiance et l'esthétique</div></div></div>
+          <div class="chips-grid" id="chips-universe">
+            <div class="chip" data-group="universe" onclick="selectChip(this)">✨ Luxury</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">👟 Streetwear</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🏁 Motorsport</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🌆 Cyberpunk</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🏙️ Dubai Luxury</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🎮 Gaming</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">👗 Fashion</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🎭 Anime</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🌌 Sci-Fi</div>
+            <div class="chip" data-group="universe" onclick="selectChip(this)">🏆 Sports</div>
+          </div>
+        </div>
+        <div class="config-step">
+          <div class="step-header"><div class="step-badge">3</div><div><div class="step-title">Accessoires</div><div class="step-sub">Sélectionne plusieurs accessoires</div></div></div>
+          <div class="chips-grid" id="chips-accessories">
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">⛑️ Casque</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🕶️ Lunettes</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">👟 Sneakers</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">⌚ Montre</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🏆 Trophée</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🪽 Ailes</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">👑 Couronne</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🎒 Sac</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">💎 Bijoux</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🔫 Arme</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🎸 Instrument</div>
+            <div class="chip multi" data-group="accessories" onclick="toggleChip(this)">🛹 Skateboard</div>
+          </div>
+        </div>
+        <div class="config-step">
+          <div class="step-header"><div class="step-badge">4</div><div><div class="step-title">Description libre</div><div class="step-sub">Décris ton idée en quelques mots</div></div></div>
+          <textarea class="config-textarea" id="config-desc" placeholder="Ex: Un robot doré avec des chaussures Nike, dans un univers futuriste inspiré de Dubai..." oninput="updatePrompt()"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="preview-panel">
+      <div class="label" style="margin-bottom: 16px;">Aperçu temps réel</div>
+      <div class="preview-visual">
+        <div class="preview-placeholder" id="preview-placeholder"><div class="preview-icon">🎨</div><p>Configure ton Art Toy<br>pour voir l'aperçu</p></div>
+        <div id="preview-art" style="display:none; font-size: 100px; z-index:1; position:relative;">🤖</div>
+      </div>
+      <div class="preview-tags" id="preview-tags"></div>
+      <div><div class="prompt-label">Prompt IA généré</div><div class="preview-prompt" id="preview-prompt">Tes sélections apparaîtront ici sous forme de prompt IA...</div></div>
+      <button class="generate-btn" id="gen-btn" onclick="generateConcept()" disabled>✦ Générer mes concepts IA</button>
+      <div id="gen-result" style="display:none; margin-top: 20px;">
+        <div class="label" style="margin-bottom: 12px; justify-content: center;">Concepts générés</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;" id="concepts-grid"></div>
+        <button class="btn-primary" style="width:100%; justify-content:center;" onclick="showPage('pricing')">Commander ce concept →</button>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: PRICING -->
+<div class="page" id="page-pricing">
+  <section>
+    <div class="section-header"><div class="label">Tarifs</div><h2>Choisis ton <span class="gold-text">offre</span></h2><p>Du fichier 3D à la série limitée, une solution pour chaque projet.</p></div>
+    <div class="pricing-grid">
+      <div class="pricing-card"><div class="pricing-icon">📁</div><div class="pricing-name">Fichier 3D</div><div class="pricing-qty">Digital uniquement</div><div class="pricing-price"><sup>€</sup>TBD</div><div class="pricing-unit">prix à définir</div><div class="pricing-features"><div class="pricing-feature">Fichier STL/OBJ haute résolution</div><div class="pricing-feature">Prêt pour impression 3D</div><div class="pricing-feature">Licence usage personnel</div><div class="pricing-feature">Livraison digitale immédiate</div></div><button class="pricing-cta" onclick="showPage('create')">Commencer</button></div>
+      <div class="pricing-card"><div class="pricing-icon">🏅</div><div class="pricing-name">Exemplaire Unique</div><div class="pricing-qty">1 figurine physique</div><div class="pricing-price"><sup>€</sup>249</div><div class="pricing-unit">par exemplaire</div><div class="pricing-features"><div class="pricing-feature">Figurine produite à l'unité</div><div class="pricing-feature">Peinture & finitions premium</div><div class="pricing-feature">Certificat d'authenticité</div><div class="pricing-feature">Boîte de présentation</div></div><button class="pricing-cta" onclick="showPage('create')">Commencer</button></div>
+      <div class="pricing-card"><div class="pricing-icon">📦</div><div class="pricing-name">Série 49</div><div class="pricing-qty">49 exemplaires</div><div class="pricing-price"><sup>€</sup>149</div><div class="pricing-unit">par unité · total ~7 300 €</div><div class="pricing-features"><div class="pricing-feature">Série limitée numérotée</div><div class="pricing-feature">Finitions qualité collector</div><div class="pricing-feature">Packaging personnalisé</div><div class="pricing-feature">Délai : 3-4 semaines</div></div><button class="pricing-cta" onclick="showPage('create')">Commencer</button></div>
+      <div class="pricing-card featured"><div class="pricing-badge">⭐ Populaire</div><div class="pricing-icon">🎯</div><div class="pricing-name">Série 99</div><div class="pricing-qty">99 exemplaires</div><div class="pricing-price"><sup>€</sup>129</div><div class="pricing-unit">par unité · total ~12 800 €</div><div class="pricing-features"><div class="pricing-feature">Série limitée numérotée</div><div class="pricing-feature">Finitions qualité collector</div><div class="pricing-feature">Packaging personnalisé premium</div><div class="pricing-feature">Suivi prioritaire</div><div class="pricing-feature">Délai : 4-5 semaines</div></div><button class="pricing-cta" onclick="showPage('create')">Commencer</button></div>
+      <div class="pricing-card"><div class="pricing-icon">🚀</div><div class="pricing-name">Série 199+</div><div class="pricing-qty">199 exemplaires et +</div><div class="pricing-price"><sup>€</sup>99</div><div class="pricing-unit">par unité · à partir de</div><div class="pricing-features"><div class="pricing-feature">Volume sur mesure</div><div class="pricing-feature">Meilleur tarif unitaire</div><div class="pricing-feature">Account manager dédié</div><div class="pricing-feature">Idéal pour les marques</div><div class="pricing-feature">Délai : 6-8 semaines</div></div><button class="pricing-cta" onclick="showPage('brands')">Nous contacter</button></div>
+    </div>
+    <div class="pricing-savings"><div><p class="white-text" style="font-size:16px; font-weight:700; margin-bottom:4px;">Économies sur les grandes séries</p><p>En passant de 1 à 199+ exemplaires, économisez jusqu'à <strong style="color:var(--gold)">60%</strong> par unité.</p></div><button class="btn-primary" onclick="showPage('create')">✦ Créer mon Art Toy</button></div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: GALLERY -->
+<div class="page" id="page-gallery">
+  <section>
+    <div class="section-header"><div class="label">Galerie</div><h2>Nos <span class="gold-text">créations</span></h2><p>Explore les Art Toys générés par notre communauté.</p></div>
+    <div class="gallery-filters" id="gallery-filters">
+      <div class="filter-chip active" onclick="filterGallery(this, 'all')">Tout voir</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'luxury')">Luxury</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'streetwear')">Streetwear</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'cyberpunk')">Cyberpunk</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'gaming')">Gaming</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'motorsport')">Motorsport</div>
+      <div class="filter-chip" onclick="filterGallery(this, 'fashion')">Fashion</div>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: INFLUENCERS -->
+<div class="page" id="page-influencers">
+  <div class="audience-hero">
+    <div>
+      <div class="label">For Influencers</div>
+      <h1>Ton <span class="gold-text">avatar physique</span> pour ta communauté</h1>
+      <p>Transforme ton image en Art Toy collector. Vends-le à ta communauté, offre-le en cadeau, crée un objet de merch premium qui te représente.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;"><button class="btn-primary" onclick="showPage('create')">✦ Créer mon Art Toy</button><button class="btn-outline" onclick="showPage('pricing')">Voir les tarifs</button></div>
+    </div>
+    <div class="audience-visual">📱</div>
+  </div>
+  <section>
+    <div class="section-header"><div class="label">Cas d'usage</div><h2>Pourquoi les influenceurs <span class="gold-text">nous choisissent</span></h2></div>
+    <div class="usecase-grid">
+      <div class="usecase-card"><div class="usecase-emoji">🎁</div><h3>Cadeau Communauté</h3><p>Offre ta figurine en récompense à tes abonnés les plus fidèles.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🛍️</div><h3>Merch Premium</h3><p>Lance ta collection limitée de figurines à ton effigie.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🤝</div><h3>Collab Marques</h3><p>Propose des collaborations exclusives avec des marques via ta figurine personnalisée.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🏆</div><h3>Trophée VIP</h3><p>Récompense tes meilleurs clients avec un Art Toy exclusif à ton image.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">📸</div><h3>Contenu Unique</h3><p>Ta figurine génère du contenu original pour tes réseaux.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🌟</div><h3>Édition Limitée</h3><p>Crée la rareté et l'exclusivité avec une série numérotée.</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="testimonial-strip">
+      <div class="testimonial"><blockquote>"J'ai lancé ma série de 49 figurines et elles se sont toutes vendues en 2 heures."</blockquote><cite>@MaxInfluence</cite><div class="cite-role">1.2M abonnés · TikTok</div></div>
+      <div class="testimonial"><blockquote>"Le processus est incroyablement simple. L'IA a créé quelque chose qui me ressemble vraiment."</blockquote><cite>@StyleByAna</cite><div class="cite-role">850K abonnés · Instagram</div></div>
+      <div class="testimonial"><blockquote>"Ma figurine Cyberpunk est devenue l'objet de merch le plus vendu de toute ma boutique."</blockquote><cite>@GamingBoss_FR</cite><div class="cite-role">2.1M abonnés · YouTube</div></div>
+    </div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: BRANDS -->
+<div class="page" id="page-brands">
+  <div class="audience-hero">
+    <div>
+      <div class="label">For Brands</div>
+      <h1>L'Art Toy,<br><span class="gold-text">nouveau levier</span><br>de ta marque</h1>
+      <p>Crée un objet collector à l'effigie de ta marque. Cadeaux clients, PLV premium, objets promotionnels — nous gérons tout.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;"><button class="btn-primary" onclick="showPage('create')">✦ Créer mon Art Toy</button><button class="btn-outline" onclick="showPage('process')">Voir le process</button></div>
+    </div>
+    <div class="audience-visual">🏢</div>
+  </div>
+  <section>
+    <div class="section-header"><div class="label">Solutions marques</div><h2>Des figurines pour <span class="gold-text">chaque objectif</span></h2></div>
+    <div class="usecase-grid">
+      <div class="usecase-card"><div class="usecase-emoji">🎀</div><h3>Cadeaux Clients VIP</h3><p>Surprends tes clients les plus importants avec un Art Toy collector.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🎪</div><h3>Événements & Salons</h3><p>Distribue tes figurines en édition limitée lors de tes événements.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🏅</div><h3>Programme de Fidélité</h3><p>Intègre les Art Toys dans ton programme de récompenses.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">📣</div><h3>Campagne Marketing</h3><p>Lance une campagne virale autour d'une figurine collector.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🤝</div><h3>Collab Artistes</h3><p>Associe ta marque à un artiste en co-créant une figurine exclusive.</p></div>
+      <div class="usecase-card"><div class="usecase-emoji">🌐</div><h3>NFT & Digital</h3><p>Combine ta figurine physique avec une version digitale.</p></div>
+    </div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<!-- PAGE: PROCESS -->
+<div class="page" id="page-process">
+  <section>
+    <div class="section-header"><div class="label">Production Process</div><h2>De l'idée à la <span class="gold-text">figurine</span></h2><p>Un processus rigoureux en 7 étapes, du concept IA à la livraison.</p></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+      <div class="process-timeline">
+        <div class="process-step"><div class="process-num">1</div><div class="process-content"><div class="process-meta"><h3>Configuration</h3><span class="process-duration">5 min</span></div><p>Tu remplis le configurateur : type de figurine, univers, accessoires et description libre.</p></div></div>
+        <div class="process-step"><div class="process-num">2</div><div class="process-content"><div class="process-meta"><h3>Génération IA</h3><span class="process-duration">2-5 min</span></div><p>L'IA génère plusieurs concepts visuels haute résolution pour ton Art Toy.</p></div></div>
+        <div class="process-step"><div class="process-num">3</div><div class="process-content"><div class="process-meta"><h3>Validation Humaine</h3><span class="process-duration">24-48h</span></div><p>Notre équipe valide et affine le concept choisi avant la mise en production.</p></div></div>
+        <div class="process-step"><div class="process-num">4</div><div class="process-content"><div class="process-meta"><h3>Modélisation 3D</h3><span class="process-duration">3-5 jours</span></div><p>Nos modélisateurs 3D traduisent le concept en modèle physique détaillé.</p></div></div>
+        <div class="process-step"><div class="process-num">5</div><div class="process-content"><div class="process-meta"><h3>Impression & Production</h3><span class="process-duration">1-4 semaines</span></div><p>Impression 3D haute résolution, moulage, peinture et finitions.</p></div></div>
+        <div class="process-step"><div class="process-num">6</div><div class="process-content"><div class="process-meta"><h3>Contrôle Qualité</h3><span class="process-duration">1-2 jours</span></div><p>Chaque figurine est inspectée individuellement. Zéro défaut toléré.</p></div></div>
+        <div class="process-step"><div class="process-num">7</div><div class="process-content"><div class="process-meta"><h3>Expédition</h3><span class="process-duration">2-5 jours</span></div><p>Emballage premium et expédition sécurisée avec suivi en temps réel.</p></div></div>
+      </div>
+      <div>
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; margin-bottom: 24px;">
+          <div class="label" style="margin-bottom: 16px;">Statuts de commande</div>
+          <div class="status-chips">
+            <span class="status-chip s1">📋 New Order</span>
+            <span class="status-chip s2">⏳ Waiting Validation</span>
+            <span class="status-chip s3">🎨 3D Modeling</span>
+            <span class="status-chip s4">🖨️ Printing</span>
+            <span class="status-chip s5">🔍 QC</span>
+            <span class="status-chip s6">📦 Shipped</span>
+            <span class="status-chip s7">✅ Completed</span>
+          </div>
+        </div>
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px;">
+          <div class="label" style="margin-bottom: 16px;">Phase 2 — Roadmap</div>
+          <h3 style="margin-bottom: 12px;">Image → Modèle 3D</h3>
+          <p style="font-size: 14px; line-height: 1.7;">Prochainement : conversion semi-automatique d'une image en modèle 3D.</p>
+          <div style="margin-top: 16px; padding: 12px 16px; background: var(--gold-dim); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px;"><span style="font-size: 12px; color: var(--gold); font-weight: 700;">🚀 Coming Soon — Phase 2</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-logo">FIGZ <span>●</span> COLLECTIBLE</div><p>© 2025 Figz Collectible AI Platform</p><p style="color: var(--text3); font-size: 12px;">Powered by AI · Crafted by Hand</p></footer>
+</div>
+
+<script src="../animations/figz.js"></script>
+</body>
+</html>
