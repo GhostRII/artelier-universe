@@ -42,12 +42,24 @@
       <button class="close-btn" id="closePanel">✕</button>
     </div>
     <nav class="panel-nav">
+      <div class="panel-nav-item active" data-target="sec-config"><span class="nav-icon">⚙️</span><span class="nav-label">Configurateur</span></div>
       <div class="panel-nav-item" data-target="sec-blog"><span class="nav-icon">📰</span><span class="nav-label">Brèves & Actualités</span></div>
       <div class="panel-nav-item" data-target="sec-gallery"><span class="nav-icon">🖼️</span><span class="nav-label">Nos Créations</span></div>
       <div class="panel-nav-item" data-target="sec-social"><span class="nav-icon">🔗</span><span class="nav-label">Réseaux sociaux</span></div>
       <div class="panel-nav-item" data-target="sec-contact"><span class="nav-icon">✉️</span><span class="nav-label">Contact</span></div>
     </nav>
-
+    <div class="panel-content">
+      <div class="panel-section active" id="sec-config">
+        <p>Configurez votre produit en quelques clics.</p>
+        <div class="config-grid">
+          <div class="config-card"><div class="c-icon">👕</div><div class="c-label">Textile</div></div>
+          <div class="config-card"><div class="c-icon">🖼️</div><div class="c-label">Affiche</div></div>
+          <div class="config-card"><div class="c-icon">📦</div><div class="c-label">Packaging</div></div>
+          <div class="config-card"><div class="c-icon">🏷️</div><div class="c-label">Étiquette</div></div>
+          <div class="config-card"><div class="c-icon">📒</div><div class="c-label">Carnet</div></div>
+          <div class="config-card"><div class="c-icon">🎁</div><div class="c-label">Cadeau</div></div>
+        </div>
+      </div>
       <div class="panel-section" id="sec-blog">
         <div class="blog-item"><div class="b-date">Mai 2026</div><div class="b-title">Nouvelle imprimante grand format</div><div class="b-excerpt">Artelier 3D s'équipe d'une imprimante UV grand format pour des créations encore plus ambitieuses.</div></div>
         <div class="blog-item"><div class="b-date">Avril 2026</div><div class="b-title">Collaboration avec Studio Lumière</div><div class="b-excerpt">Un partenariat créatif qui a donné vie à une série limitée de posters d'artistes.</div></div>
@@ -111,6 +123,7 @@
       <div class="hero-tag">Studio d'impression créative</div>
       <h1>L'impression au service<br/>de votre <em>créativité</em></h1>
       <p class="hero-desc">Artelier 3D est un studio d'impression spécialisé dans la création sur mesure : textile, affiches, packaging et bien plus.</p>
+      <button class="hero-cta" onclick="openPanel('sec-config')">Configurer mon projet →</button>
     </section>
 
     <section class="carousel-section">
